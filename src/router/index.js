@@ -3,6 +3,7 @@ import VueRouter from 'vue-router'
 import HomeView from '../views/HomeView.vue'
 import TodoList from '../views/TodoList.vue'
 import IssueList from '../views/IssueList.vue'
+import TodoIssues from '../views/TodoIssues.vue'
 
 Vue.use(VueRouter)
 
@@ -21,6 +22,11 @@ const routes = [
     path: '/issue-list',
     name: 'IssueList',
     component: IssueList
+  },
+  {
+    path: '/todo-issues',
+    name: 'TodoIssues',
+    component: TodoIssues
   }
 ]
 
