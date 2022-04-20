@@ -10,7 +10,7 @@
           <el-row :gutter="12">
             <el-col :span="21">{{ todo }}</el-col>
             <el-col :span="3">
-              <el-button @click="removeTodo(index)" type="success" icon="el-icon-check" circle></el-button>
+              <el-button @click="closeTodo(index)" type="success" icon="el-icon-check" circle></el-button>
             </el-col>
           </el-row>
         </el-card>
@@ -18,6 +18,7 @@
     </el-row>
   </div>
 </template>
+
 <script>
 export default {
   name: 'TodoList',
@@ -32,7 +33,7 @@ export default {
       this.todos.push(this.todo);
       this.todo = '';
     },
-    removeTodo(index){
+    closeTodo(index){
       this.todos.splice(index, 1);
     }
   }
